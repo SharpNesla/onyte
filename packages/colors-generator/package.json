@@ -1,0 +1,32 @@
+{
+  "name": "@onyte/colors-generator",
+  "version": "0.0.1",
+  "type": "module",
+  "license": "MIT",
+  "sideEffects": false,
+  "exports": {
+    ".": {
+      "types": "./dist/index.d.ts",
+      "default": "./dist/index.js"
+    }
+  },
+  "main": "./dist/index.js",
+  "types": "./dist/index.d.ts",
+  "files": [
+    "dist",
+    "src"
+  ],
+  "peerDependencies": {
+    "chroma-js": ">=2.4.2"
+  },
+  "devDependencies": {
+    "chroma-js": "^3.1.0",
+    "@types/chroma-js": "^2.4.0",
+    "typescript": "^5.7.0",
+    "vite": "^6.0.0"
+  },
+  "scripts": {
+    "build": "vite build && tsc --project tsconfig.build.json",
+    "typecheck": "tsc --noEmit"
+  }
+}
